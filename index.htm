@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+
+
+
+    <title>UMIC - IC ACARACUZINHO</title>
+    <link rel="icon" href="image/favicon.ico">
+    <!-- <link rel="icon">: é a tag que informa ao navegador que você está definindo um favicon. -->
+
+    <style>
+        .card:hover {
+            transform: scale(1.02);
+
+        }
+
+        .card-celula:hover {
+            transform: scale(1.02);
+
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .hidden {
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100%);
+            transition: all 1.5s;
+        }
+
+        .hidden h1 {
+            font-family: "Momo Trust Display", sans-serif;
+        }
+
+        .show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+            transition: all 1.5s;
+        }
+
+        .lideres-principais> :nth-child(2) {
+            transition-delay: 400ms;
+        }
+
+        .co-lider> :nth-child(2) {
+            transition-delay: 200ms;
+        }
+
+        .co-lider> :nth-child(3) {
+            transition-delay: 400ms;
+        }
+
+        .cco-lider> :nth-child(4) {
+            transition-delay: 600ms;
+        }
+
+        .cco-lider> :nth-child(5) {
+            transition-delay: 800ms;
+        }
+
+        .co-lider> :nth-child(6) {
+            transition-delay: 1000ms;
+        }
+
+        .co-lider> :nth-child(7) {
+            transition-delay: 1200ms;
+        }
+
+        .co-lider> :nth-child(8) {
+            transition-delay: 1400ms;
+        }
+
+        .co-lider> :nth-child(9) {
+            transition-delay: 1600ms;
+        }
+
+        .co-lider> :nth-child(10) {
+            transition-delay: 1800ms;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            max-width: 570px;
+        }
+
+        /* whatsapp */
+        #div-fixa {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            margin: 0 20px;
+            background: rgb(89, 245, 122);
+            width: 230px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.5s all;
+        }
+
+        #div-fixa.shrink {
+            width: 40px;
+            transition: 0.5s all;
+            overflow: hidden;
+        }
+
+        #div-fixa a .flex-itens {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #div-fixa a {
+            text-decoration: none;
+        }
+
+        #div-fixa a .flex-itens span {
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000425;
+            margin-left: 5px;
+            font-size: 18px;
+            min-width: 170px;
+            opacity: 0;
+
+        }
+
+        #div-fixa a .flex-itens span.aparecer {
+            transition: 0.5s all;
+            opacity: 1;
+        }
+
+        .flutuar {
+            animation-name: flutuar;
+            animation-duration: 0.7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes flutuar {
+            from {
+                transform: translateY(0);
+                filter: brightness(100%);
+            }
+
+            to {
+                transform: translateY(-10px);
+                filter: brightness(150%);
+            }
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #000425;">
+    <header>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #000425;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="image/umic.png" style="height: 50px;" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Células
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="atos-2.html">Atos 2</a></li>
+                                <li><a class="dropdown-item" href="noventa-e-nove.html">Noventa e Nove</a></li>
+                                <li><a class="dropdown-item" href="redimidas.html">Redimidas</a></li>
+                                <li><a class="dropdown-item" href="filhas-do-rei.html">Filhas do Rei</a></li>
+                                <li><a class="dropdown-item" href="exale.html">Exale</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" />
+                        <button class="btn btn-dark" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carrossel -->
+        <section class="hidden">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image/carrosel/foto 01.jpg" style="object-fit: cover;" class="d-block w-100 img-fluid"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/carrosel/foto 02.jpg" style="object-fit: cover;" class="d-block w-100 img-fluid"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/carrosel/foto 03.jpg" style="object-fit: cover;" class="d-block w-100 img-fluid"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/carrosel/foto 04.jpg" style="object-fit: cover;" class="d-block w-100 img-fluid"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/carrosel/foto 05.jpg" style="object-fit: cover;" class="d-block w-100 img-fluid"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/carrosel/foto 06.jpg" style="object-fit: cover;" class="d-block w-100 img-fluid"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/carrosel/foto 07.jpg" style="object-fit: cover;" class="d-block w-100 img-fluid"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/carrosel/foto 08.jpg" style="object-fit: cover;" class="d-block w-100 img-fluid"
+                            alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Sobre UMIC -->
+        <section class="hidden d-flex justify-content-center align-items-center px-3" style="min-height: 100vh;">
+            <div class="text-center text-light w-75 w-md-75" style="min-width: 50%">
+                <h1 class="display-4 display-md-1">SOBRE A UMIC</h1>
+                <p class="m-4 lead text-justify display-md-1"
+                    style="font-size: clamp(1rem, 2.5vw, 2rem); text-align: justify;">
+                    "A UMIC é a União da Mocidade da Igreja de Cristo, um movimento que conecta jovens para viverem a
+                    Palavra e fortalecerem sua fé. Nosso propósito é formar discípulos, promover comunhão e impactar
+                    vidas através do amor de Cristo. Somos uma geração comprometida com oração, serviço e transformação,
+                    levando esperança onde Deus nos enviar."
+                </p>
+            </div>
+        </section>
+
+        <!-- Card Liderança -->
+        <section class="hidden d-flex flex-column">
+            <div class="d-flex flex-row justify-content-center gap-3 flex-wrap mt-3 mb-4 text-light">
+                <h1 class="display-4 display-md-1">Liderança</h1>
+            </div>
+            <div class="lideres-principais d-flex justify-content-center flex-wrap gap-3 mt-3">
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Kelton.png" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Kelton Santos</h2>
+                        <p class="card-text">Sou Kelton, casado com Evilásia, dedicado a servir e liderar. Atuo como
+                            líder da juventude e também os líderes de célula, com foco em discipulado e crescimento
+                            espiritual.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Evilasia.png" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Evilasia Cavalcante</h2>
+                        <p class="card-text">Sou Evilásia, casada com Kelton, apaixonada por servir a Deus. Lidero a
+                            juventude e também os líderes de célula, com dedicação para formar discípulos e fortalecer a
+                            visão do Reino.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Co Lider -->
+            <div class="co-lider d-flex flex-row justify-content-center gap-3 flex-wrap mt-3 mb-4">
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Marcelo.jpeg" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Marcelo Cavalcante</h2>
+                        <p class="card-text">Sou Marcelo, líder da juventude e da célula Atos 2, junto com Davi. Tenho
+                            paixão por discipular e inspirar jovens a viverem os princípios do Reino com propósito e
+                            unidade.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Davi.jpg" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Davi Faustino</h2>
+                        <p class="card-text">Sou Davi, líder da célula Atos 2 junto com Marcelo e apaixonado por
+                            discipulado. Meu propósito é fortalecer jovens na fé e promover comunhão através da visão de
+                            Cristo.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Ermeson.png" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Ermeson Bandeira</h2>
+                        <p class="card-text">Sou Ermeson, líder da juventude e da célula Noventa e Nove junto com Levi.
+                            Meu propósito é discipular e inspirar jovens a viverem uma vida de fé e comunhão em Cristo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Levi.jpeg" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Levi Faustino</h2>
+                        <p class="card-text">Sou Levi, líder da célula Noventa e Nove junto com Ermeson. Tenho como
+                            missão discipular e motivar jovens a viverem em comunhão e propósito, fortalecendo sua fé em
+                            Cristo.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Ceris.jpeg" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Cerismar Monteiro</h2>
+                        <p class="card-text">Sou Ceris, líder da juventude e da célula Redimidas junto com Hevelyn.
+                            Minha missão é discipular e inspirar mulheres a viverem em comunhão e propósito,
+                            fortalecendo sua fé em Cristo.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Hevelyn.jpeg" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Hevelyn Xavier</h2>
+                        <p class="card-text">Sou Hevelyn, líder da célula Redimidas junto com Ceris. Tenho como
+                            propósito discipular e encorajar mulheres a viverem em comunhão e propósito, fortalecendo
+                            sua fé em Cristo.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Lara.png" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Lara Ingrid</h2>
+                        <p class="card-text">Sou Lara, líder da juventude e da célula Filhas do Rei junto com Victória
+                            Viana. Meu propósito é discipular e inspirar jovens a viverem em comunhão e propósito,
+                            fortalecendo sua fé em Cristo.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Victória.png" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Victória Viana</h2>
+                        <p class="card-text">Sou Victória Viana, líder da célula Filhas do Rei junto com Lara. Minha
+                            missão é discipular e inspirar jovens a viverem em comunhão e propósito, fortalecendo sua fé
+                            em Cristo.</p>
+                    </div>
+                </div>
+
+                <!-- <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Majele.jpeg" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Majele Aires</h2>
+                        <p class="card-text">Sou Majele, líder da juventude e da célula Filhas do Rei junto com a Lara e
+                            a Victória Viana e apaixonada por discipular. Minha missão é inspirar jovens a viverem em
+                            comunhão e propósito, fortalecendo sua fé e relacionamento com Cristo.</p>
+                    </div>
+                </div> -->
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Gina.jpeg" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Gina Fagna</h2>
+                        <p class="card-text">Sou Gina, líder da juventude e da célula Exale junto com Samara. Tenho como
+                            missão discipular e inspirar jovens a viverem em comunhão e propósito, fortalecendo sua fé
+                            em Cristo.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem; transition: 0.5s;">
+                    <img src="image/lideres/Samara.jpeg" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2>Samara Farias</h2>
+                        <p class="card-text">Sou Samara, líder da célula Exale junto com Gina. Minha missão é discipular
+                            e inspirar jovens a viverem em comunhão e propósito, fortalecendo sua fé em Cristo.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Logo das Células -->
+        <section class="hidden">
+            <div class="d-flex flex-row justify-content-center gap-3 flex-wrap mt-3 mb-4 text-light">
+                <h1 style="font-size:50px; margin-top: 100px;">CÉLULAS</h1>
+            </div>
+
+            <div
+                style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 200px; margin-top: 100px;">
+                <div class="card-celula" style="width: 18rem; transition: 0.5s;">
+                    <a href="atos-2.html"><img src="image/logos/atos 2 .png"
+                            style="height: 18rem; object-fit: cover; border-radius: 50%; border: 4px solid #F24405; cursor: pointer;"
+                            class="card-img-top" alt="Logo Atos 2"></a>
+                </div>
+
+                <div class="card-celula" style="width: 18rem; transition: 0.5s;">
+                    <a href="noventa-e-nove.html"><img src="image/logos/noveta e nove.jpg"
+                            style="height: 18rem; object-fit: cover; border-radius: 50%; border: 4px solid #80DDF2; cursor: pointer;"
+                            class="card-img-top" alt="Logo Noventa e Nove"></a>
+                </div>
+
+                <div class="card-celula" style="width: 18rem; transition: 0.5s;">
+                    <a href="redimidas.html"><img src="image/logos/redimidas.png"
+                            style="height: 18rem; object-fit: cover; border-radius: 50%; border: 4px solid #768C70; cursor: pointer;"
+                            class="card-img-top" alt="Logo Redimidas"></a>
+                </div>
+
+                <div class="card-celula" style="width: 18rem; transition: 0.5s;">
+                    <a href="filhas-do-rei.html"><img src="image/logos/filhas do rei.png"
+                            style="height: 18rem; object-fit: cover; border-radius: 50%; border: 4px solid #D94E73; cursor: pointer;"
+                            class="card-img-top" alt="Logo Filhas do Rei"></a>
+                </div>
+
+                <div class="card-celula" style="width: 18rem; transition: 0.5s;">
+                    <a href="exale.html"><img src="image/logos/exale.png"
+                            style="height: 18rem; object-fit: cover; border-radius: 50%; border: 4px solid #7A6D8C; cursor: pointer;"
+                            class="card-img-top" alt="Logo Exale"></a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Video -->
+        <section class="px-3">
+            <div class="video-container d-flex flex-column align-items-center mt-4">
+                <h2 id="video" class="title-video mb-4 text-light text-center">Jovens que Amam, Servem e Transformam - Vem conhecer!!!</h2>
+                <iframe class="ratio ratio-16x9"
+                    style="max-width: 570px; width: 100%; border-radius: 20px; overflow: hidden;" width="560"
+                    height="315" src="https://www.youtube.com/embed/BzQekmcJeeU" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <footer style="background-color: #020842;">
+        <div class="d-flex justify-content-center gap-2 mt-4 pb-3 pt-3">
+            <a href="https://www.instagram.com/umic_ica?igsh=MWgxbXlyZDRnbHllNQ=="><img style="width: 40px;"
+                    src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com/results?search_query=igreja+de+cristo+no+acaracuzinho"><img
+                    src="https://cdn-icons-png.flaticon.com/128/4494/4494485.png" style="width: 40px;" alt="You tube">
+            </a>
+        </div>
+        <div class="d-flex justify-content-center gap-2 text-light">
+            <p class="text-center">© 2025 Igreja de Cristo Acaracuzinho - UMIC. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="div-fixa" class="flutuar" data-shrink="yes">
+        <a href="https://wa.me/5585989034960" target="_blank">
+            <div class="flex-itens">
+                <img src="https://cdn-icons-png.flaticon.com/128/4494/4494494.png" style="width: 40px;"
+                    alt="chamar no WhatsApp">
+                <span>Converse conosco!</span>
+            </div>
+        </a>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

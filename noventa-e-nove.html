@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+
+
+
+    <title>UMIC - ICA</title>
+    <link rel="icon" href="image/favicon.ico">
+    <!-- <link rel="icon">: é a tag que informa ao navegador que você está definindo um favicon. -->
+
+    <style>
+        .card:hover {
+            transform: scale(1.02);
+            transition: 0.5s;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .hidden {
+            opacity: 0;
+            filter: blur(15px);
+            transform: translateX(-100%);
+            transition: all 1.5s;
+        }
+
+        .hidden h1 {
+            font-family: "Momo Trust Display", sans-serif;
+        }
+
+        .show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+            transition: all 1.5s;
+        }
+
+        /* whatsapp */
+        #div-fixa {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            margin: 0 20px;
+            background: rgb(89, 245, 122);
+            width: 230px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.5s all;
+        }
+
+        #div-fixa.shrink {
+            width: 40px;
+            transition: 0.5s all;
+            overflow: hidden;
+        }
+
+        #div-fixa a .flex-itens {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #div-fixa a {
+            text-decoration: none;
+        }
+
+        #div-fixa a .flex-itens span {
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000425;
+            margin-left: 5px;
+            font-size: 18px;
+            min-width: 170px;
+            opacity: 0;
+
+        }
+
+        #div-fixa a .flex-itens span.aparecer {
+            transition: 0.5s all;
+            opacity: 1;
+        }
+
+        .flutuar {
+            animation-name: flutuar;
+            animation-duration: 0.7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes flutuar {
+            from {
+                transform: translateY(0);
+                filter: brightness(100%);
+            }
+
+            to {
+                transform: translateY(-10px);
+                filter: brightness(150%);
+            }
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #000;">
+    <header>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color:#80DDF2;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.htm"><img src="image/umic.png" style="height: 50px;" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.htm">Home</a>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Células
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="atos-2.html">Atos 2</a></li>
+                                <li><a class="dropdown-item" href="noventa-e-nove.html">Noventa e Nove</a></li>
+                                <li><a class="dropdown-item" href="redimidas.html">Redimidas</a></li>
+                                <li><a class="dropdown-item" href="filhas-do-rei.html">Filhas do Rei</a></li>
+                                <li><a class="dropdown-item" href="exale.html">Exale</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" />
+                        <button class="btn btn-dark" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Card Liderança -->
+        <section class="hidden d-flex flex-column">
+            <div class="d-flex flex-row justify-content-center gap-3 flex-wrap mt-3 mb-4 text-light">
+                <h1 style="color: #80DDF2; font-size:50px ">Líderes</h1>
+            </div>
+            <div class="co-lider d-flex flex-row justify-content-center gap-3 flex-wrap mt-3 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="image/lideres/Ermeson.png" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2 style="color: #000; text-shadow: 1px 1px 3px #80DDF2">Ermeson Bandeira</h2>
+                        <p class="card-text">Sou Ermeson, líder da juventude e da célula Noventa e Nove junto com Levi.
+                            Meu propósito é discipular e inspirar jovens a viverem uma vida de fé e comunhão em Cristo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="image/lideres/Levi.jpeg" style="height: 18rem; object-fit: cover;" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h2 style="color: #000; text-shadow: 1px 1px 3px #80DDF2">Levi Faustino</h2>
+                        <p class="card-text">Sou Levi, líder da célula Noventa e Nove junto com Ermeson. Tenho como
+                            missão discipular e motivar jovens a viverem em comunhão e propósito, fortalecendo sua fé em
+                            Cristo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sobre a Noventa e Nove -->
+        <section class="hidden d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="text-center text-light" style="width: 50%;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="d-flex flex-column align-items-center gap-3 p-3 w-100"
+                            style="border-radius: 10px; min-width: 320px;">
+                            <img src="image/logos/noveta e nove.jpg" alt=""
+                                style="max-width: 300px; border-radius: 10px;">
+                            <p class="m-4 lead" style="text-align: justify; font-size:25px">
+                                O nome Noventa e Nove nasce de uma verdade poderosa: Deus nunca desiste de nós. Ele é o
+                                Bom Pastor que deixa as noventa e nove ovelhas seguras para buscar aquela que está
+                                perdida <strong>(Lucas 15:4)</strong>. Essa é a essência do Evangelho – um amor que não mede esforços
+                                para nos resgatar, mesmo quando estamos longe ou distraídos.
+                                <br><br>
+                                Essa história fala muito sobre quem somos e sobre como Deus age. Muitos de nós estávamos
+                                apenas “indo à igreja”, sem imaginar que seríamos chamados para algo maior. Mas Deus
+                                veio até nós. Ele nos encontrou, nos levantou e nos deu propósito. Hoje, lideramos não
+                                porque planejamos, mas porque fomos alcançados pelo amor que busca e transforma.
+                                <br><br>
+                                A célula Noventa e Nove existe para lembrar que ninguém está tão distante que não possa
+                                ser alcançado pelo Pai. Queremos ser um espaço de acolhimento, restauração e
+                                discipulado, onde cada pessoa descubra que é valiosa para Deus e que Ele tem planos
+                                perfeitos para sua vida.
+                                <br><br>
+                                <strong>Versículo-chave:</strong>
+                                "Qual de vocês que, possuindo cem ovelhas e perdendo uma, não deixa as noventa e nove no
+                                campo e vai atrás da ovelha perdida, até encontrá-la?"
+                                <strong>(Lucas 15:4)</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <footer style="background-color: #80DDF2;">
+        <div class="d-flex justify-content-center gap-2 mt-4 pb-3 pt-3">
+            <a href="https://www.instagram.com/umic_ica?igsh=MWgxbXlyZDRnbHllNQ=="><img style="width: 40px;"
+                    src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com/results?search_query=igreja+de+cristo+no+acaracuzinho"><img
+                    src="https://cdn-icons-png.flaticon.com/128/4494/4494485.png" style="width: 40px;" alt="You tube">
+            </a>
+        </div>
+        <div class="d-flex justify-content-center gap-2 text-light">
+            <p class="text-center">© 2025 Igreja de Cristo Acaracuzinho - UMIC. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div id="div-fixa" class="flutuar" data-shrink="yes">
+        <a href="https://wa.me/5585999359292" target="_blank">
+            <div class="flex-itens">
+                <img src="https://cdn-icons-png.flaticon.com/128/4494/4494494.png" style="width: 40px;"
+                    alt="chamar no WhatsApp">
+                <span>Converse conosco!</span>
+            </div>
+        </a>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
